@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myf red social</title>
+    <script src="https://kit.fontawesome.com/e3b2153149.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+
+
+        <nav>
+            <div class="logo">myF</div>
+            <div class="grupo_buscar">
+                <div><input class="input" type="text" placeholder="search"></div>
+                <i class="icone fa-solid fa-magnifying-glass"></i>
+
+            </div>
+            <div class="icon">
+                <i class="icono fa-solid fa-cube"></i>
+                <i class="icono fa-solid fa-keyboard"></i>
+                <i class="icono fa-solid fa-mug-saucer"></i>
+                <i class="icono fa-solid fa-user-secret"></i>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <div id="forma" class="container-forma">
+                <li id="tabla">
+
+                    <td>
+                        <div class="post">
+                                <div class="cabeza">
+                                    <i class="icono fa-solid fa-user-secret"></i>
+                                    <div class="nombre">@user</div>
+                                </div>
+                                <div class="foto">
+                
+                                    <img src="post.png" alt="">
+                                </div>
+                
+                                <div class="reacciones">
+                                    <i class="icono fa-solid fa-heart"></i>
+                                    <i class="icono fa-solid fa-share-from-square"></i>
+                                    <i class="icono fa-solid fa-comment"></i>
+                                    
+                                </div>
+                                <div class="description">
+                                    <b>@user:</b> increible, fuí al bar y lo primero que vi fue ESTO!?,como es posible que una RAVE se haga en un charco... 
+                                    Esto es lamentable.</p>
+                                </div>
+                        
+                                <div class="comentarios">
+                                    <label class="label_comentarios" for="input_comentarios">agregar comentario</label>
+                        
+                                        <div class="grupo_comentarios" >
+                                            <tr>
+                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
+                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
+                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
+                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
+                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
+
+
+                                            </tr>
+                                        </div>
+                                    <input type="text" class="input_comentarios" id="input_comentarios">
+                                </div>
+        
+        
+                        </div>
+                    </li>
+
+                </ul>
+
+
+
+        </div>
+
+        <div class="recomendaciones">
+
+            <h1 style="text-align:center ;">new post</h1>
+
+            <div class="grupo_subir">
+
+                <label for="user" style="margin-right:19px ;">user</label>
+                <input class="input2" type="text" placeholder="@user123" id="user">
+
+            </div>
+
+            <div class="grupo_subir">
+
+                <label for="location">location</label>
+                <input class="input2" type="text" placeholder="santa marta" id="location">
+
+            </div>
+            <div class="grupo_subir">
+
+                <label for="description">description</label>
+                <textarea name="" id="description" cols="30" rows="10" style="width: 265px; height: 59px; padding: 20px;"></textarea>
+            </div>
+            <div class="grupo_subir">
+
+                <label for="load">load image</label>
+                <input style="padding: 10px;" type="file" placeholder="@user123" id="load">
+
+            </div>
+            <input id="postear" type="button" value="postear" >
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <script src="post.js"></script>
+</body>
+</html>
