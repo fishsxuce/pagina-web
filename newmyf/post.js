@@ -1,14 +1,38 @@
 document.addEventListener("DOMContentLoaded", function(){
 
     const user = document.getElementById("user");
-    // const location = document.getElementById("location");
     const btn = document.getElementById("postear");
     const description = document.getElementById("description");
     const table = document.getElementById("tabla");
-    let key = 1;
+    const btn2 = document.getElementById("boton_comentarios");
+    const comentario = document.getElementById("input_comentarios");
+    const lista_comentarios = document.getElementById("lista_comentarios");
+
+    contador_comentarios = 1;
+    let key_post = 1;
+    let key_comentario = 1;
 
 
     btn.onclick = Añadir;
+    btn2.onclick = Enviar;
+
+function Enviar(){
+    if(comentario.value === ""){
+        console.error("porfavor introduzca un comentario");
+    } else{
+        console.log("introduccinedo");
+        const com =  document.createElement('li');
+        com.setAttribute("key", key_comentario++ );
+        com.innerHTML = `
+        <li class="parrafos_comentarios"><p> <b>@user: </b> ${comentario.value}</p></li>
+        
+        
+        `;
+        lista_comentarios.appendChild(com);
+
+    }
+
+}
 
 
 function Añadir(){
@@ -17,12 +41,13 @@ function Añadir(){
 
         } else {
             const row = document.createElement('li');
-            row.setAttribute("id", key++);
-            row.innerHTML = `                <td>
+            row.setAttribute("key", key_post++);
+            row.innerHTML = `                
+                <td>
                     <div class="post">
                             <div class="cabeza">
                                 <i class="icono fa-solid fa-user-secret"></i>
-                                <div class="nombre">@user</div>
+                                <div class="nombre">@${user.value}</div>
                             </div>
                             <div class="foto">
     
@@ -36,12 +61,11 @@ function Añadir(){
                                 
                             </div>
                             <div class="description">
-                                <b>@user:</b> increible, fuí al bar y lo primero que vi fue ESTO!?,como es posible que una RAVE se haga en un charco... 
-                                Esto es lamentable.</p>
+                                <b>@${user.value}:</b> ${description.value}</p>
                             </div>
                     
                             <div class="comentarios">
-                                <label class="label_comentarios" for="input_comentarios">agregar comentario</label>
+                                <label class="label_comentarios" for="input_comentarios${contador_comentarios}">agregar comentario</label>
                     
                                     <div class="grupo_comentarios" >
                                         <tr>
@@ -54,7 +78,7 @@ function Añadir(){
     
                                         </tr>
                                     </div>
-                                <input type="text" class="input_comentarios" id="input_comentarios">
+                                <input type="text" class="input_comentarios" id="input_comentarios${contador_comentarios}">
                             </div>
     
     
@@ -62,35 +86,10 @@ function Añadir(){
                 </td>`;
 
                 table.appendChild(row);
+                contador_comentarios++;
         }
 
-        // `       
-        //         <td>
-        //         ${title.value}
-        //       </td>
-        //       <td>
-        //         ${descripcion.value}
 
-        //       </td>
-        //       <td class="text-center">
-        //         <input type="checkbox">
-        //       </td>
-        //       <td class="text-right">
-        //         <button class="btn btn-primary mb-1">
-        //           <i class="fa fa-pencil"></i>
-        //         </button>
-        //       </td>
-        // `;
-
-
-        // const removeBtn = document.createElement("button");
-        // removeBtn.classList.add('btn', 'btn', 'btn-danger', 'mb-1', 'm1-1');
-        // removeBtn.innerHTML= '<i class="fa fa-trash"></i>';
-        // removeBtn.onclick = function(e){
-        //   id = Remove(row.getAttribute("id"));
-
-        // }
-        // row.children[3].appendChild(removeBtn);
     }
 
 

@@ -32,9 +32,9 @@
 
     <div class="container">
         <div id="forma" class="container-forma">
-                <li id="tabla">
+                <ul id="tabla">
 
-                    <td>
+                    <li>
                         <div class="post">
                                 <div class="cabeza">
                                     <i class="icono fa-solid fa-user-secret"></i>
@@ -60,17 +60,15 @@
                                     <label class="label_comentarios" for="input_comentarios">agregar comentario</label>
                         
                                         <div class="grupo_comentarios" >
-                                            <tr>
-                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-                                                <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
+                                            <ul id="lista_comentarios">
 
 
-                                            </tr>
+                                            </ul>
                                         </div>
-                                    <input type="text" class="input_comentarios" id="input_comentarios">
+                                        <div class="grupo_enviarcomentario"> 
+                                            <input type="text" class="input_comentarios" id="input_comentarios">
+                                            <input type="button" class="button_enviar" value="/" id="boton_comentarios">
+                                        </div>
                                 </div>
         
         
