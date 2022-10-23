@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Roboto:wght@300&display=swap');
+
+html{
+    margin: 50px 100px;
+    font-family: 'Lato', sans-serif;
+  
+
+}
+
+body{
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    border-style: solid;
+    border-width:1.5px;
+    padding: 20px;
+    background-color: white;
+   
+}
+.img-container{
+    text-align: center;
+}
+.grupo{
+ display: flex;
+ flex-direction: column;
+ margin-top:5%;
+ margin-bottom: 2%;
+}
+label{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.0em;
+    padding: 10px;
+}
+input{
+    width: 80%;
+    padding: 10px;
+    border-style: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    background-color: rgb(241, 241, 241);
+
+    margin: auto;
+}
+.enviar{
+    width: 50%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.error{
+    display: none;
+    font-size: 1.1em;
+    color: red;
+    font-weight: bold;
+    padding-left: 8%;
+    
+}
+.validacion{
+    display: flex;
+    flex-direction: column;
+}
+.check{
+    width: 3.5%;
+}
+@media screen and (max-width:800px) {
+    html{
+        margin: 0px;
+      
+    
+    }
+    .container{
+        width: 80%;
+        margin: 15px;
+       
+    }
+
+       
+}

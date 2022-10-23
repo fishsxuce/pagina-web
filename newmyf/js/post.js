@@ -51,7 +51,7 @@ function Añadir(){
                             </div>
                             <div class="foto">
     
-                                <img src="post.png" alt="">
+                                <img src="img/post.png" alt="">
                             </div>
     
                             <div class="reacciones">
@@ -67,23 +67,23 @@ function Añadir(){
                             <div class="comentarios">
                                 <label class="label_comentarios" for="input_comentarios${contador_comentarios}">agregar comentario</label>
                     
-                                    <div class="grupo_comentarios" >
-                                        <tr>
-                                            <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-                                            <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-                                            <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-                                            <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-                                            <td><p class="parrafos_comentarios"><b>@user: </b> wow, amazing!</p></td>
-    
-    
-                                        </tr>
-                                    </div>
-                                <input type="text" class="input_comentarios" id="input_comentarios${contador_comentarios}">
+                                <div class="grupo_comentarios" >
+                                    <ul id="lista_comentarios">
+
+
+                                    </ul>
+                                </div>
+                                <div class="grupo_enviarcomentario"> 
+                                    <input type="text" class="input_comentarios" id="input_comentarios${contador_comentarios}">
+                                    <input type="button" class="button_enviar" value="/" id="boton_comentarios">
+                                </div>
+                                
                             </div>
     
     
                     </div>
                 </td>`;
+        
 
                 table.appendChild(row);
                 contador_comentarios++;
@@ -91,6 +91,7 @@ function Añadir(){
 
 
     }
+
 
 
 
